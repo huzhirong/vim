@@ -89,4 +89,7 @@ Bundle 'tpope/vim-fugitive'
 " gitv
 Bundle 'gregsexton/gitv'
 
+" git-vim
+Bundle 'motemen/git-vim'
+
 filetype plugin indent on
