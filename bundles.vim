@@ -83,6 +83,9 @@ Bundle 'mattn/vdbi-vim'
 " gist-vim
 Bundle 'mattn/gist-vim'
 
+" vim-fugitive
+Bundle 'tpope/vim-fugitive'
+
 " gitv
 Bundle 'gregsexton/gitv'
 
