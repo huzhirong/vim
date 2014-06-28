@@ -9,54 +9,81 @@ Bundle 'gmarik/vundle'
 " vim-easymotion
 Bundle 'Lokaltog/vim-easymotion'
 
+" vimwiki
 Bundle 'vimwiki'
 
+" vim-surround
 Bundle 'tpope/vim-surround'
 
-Bundle 'tsaleh/vim-matchit'
+" vim-matchit
+Bundle 'Spaceghost/vim-matchit'
 
+" nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
 
+" ctrlp
 Bundle 'kien/ctrlp.vim'
 
+" delimitmate
 Bundle 'Raimondi/delimitMate'
 
+" closetag
 Bundle 'docunext/closetag.vim'
 
+" bufexplorer
 Bundle 'corntrace/bufexplorer'
 
+" supertab
 Bundle 'ervandew/supertab'
 
+" tagbar
 Bundle 'majutsushi/tagbar'
 
+" neocomplcache
 Bundle 'Shougo/neocomplcache'
 
+" tabular
 Bundle 'godlygeek/tabular'
 
+" Mark
 Bundle 'Mark'
 
+" nerdtree
 Bundle 'scrooloose/nerdtree'
 
+" vim-javascript
 Bundle 'pangloss/vim-javascript'
 
-Bundle 'mattn/zencoding-vim'
+" emmet-vim
+Bundle "mattn/emmet-vim"
 
-Bundle 'honza/snipmate-snippets'
+"Bundle 'honza/snipmate-snippets'
 
+" Favex
 Bundle 'FavEx'
 
+" neosnippet
 Bundle 'Shougo/neosnippet'
 
+" syntastic
 Bundle 'scrooloose/syntastic'
 
+" vim-rails
 Bundle 'tpope/vim-rails'
 
+" cssbaseline
 Bundle 'cssbaseline.vim'
 
+" webapi-vim
 Bundle 'mattn/webapi-vim'
 
+" vdbi-vim
 Bundle 'mattn/vdbi-vim'
 
+" gist-vim
 Bundle 'mattn/gist-vim'
+
+" gitv
+Bundle 'gregsexton/gitv'
 
 filetype plugin indent on

@@ -64,19 +64,10 @@ let NERDTreeShowBookmarks=1
 set laststatus=2
 set statusline=%{GitBranch()}
 
-"ZenCoding
-let g:user_zen_expandabbr_key='<C-j>'
-let g:use_zen_complete_tag = 1
-let g:no_html_toolbar = 'yes'
-let g:html_tag_case = 'lowercase'
-
-autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
-autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
-autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
-autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+"emmt-vim
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-J>'
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
