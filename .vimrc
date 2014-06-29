@@ -136,6 +136,10 @@ let g:tagbar_compact = 1
 "autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 "autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 
+" 按 tab 自动补全
+autocmd FileType html imap <tab> <plug>(emmet-expand-abbr)
+autocmd FileType css imap <tab> <plug>(emmet-expand-abbr)
+
 "vimwiki
 "nmap <F3> :Vimwiki2HTML<cr> "把当前wiki文件生成html
 "nmap <F4> :VimwikiAll2HTML<cr> "把所有wiki文件生成html
@@ -147,3 +151,6 @@ let g:vimwiki_list = [{
            \ 'auto_export': 1,}]
 let g:vimwiki_list = [{'path': '/home/cry/vimwiki/wiki_techno/', 'path_html': '/home/cry/vimwiki/wiki_techno/html/', 'template_path': '/home/cry/vimwiki/wiki_techno/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1},{'path': '/home/cry/vimwiki/wiki_literature/', 'path_html': '/home/cry/vimwiki/wiki_literature/html/', 'template_path': '/home/cry/vimwiki/wiki_literature/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1}]                                
 let g:vimwiki_browsers=['/usr/bin/firefox'] "用firefox来预览wiki
+
+autocmd FileType css imap <tab> <plug>(emmet-expand-abbr)
+autocmd FileType html imap <tab> <plug>(emmet-expand-abbr)
