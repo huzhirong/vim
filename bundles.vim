@@ -58,12 +58,16 @@ Bundle 'pangloss/vim-javascript'
 Bundle "mattn/emmet-vim"
 
 "Bundle 'honza/snipmate-snippets'
+Bundle 'scrooloose/snipmate-snippets'
 
 " Favex
 Bundle 'FavEx'
 
 " neosnippet
 Bundle 'Shougo/neosnippet'
+
+" neosnippet-snippets
+Bundle 'Shougo/neosnippet-snippets'
 
 " syntastic
 Bundle 'scrooloose/syntastic'
