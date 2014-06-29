@@ -92,4 +92,7 @@ Bundle 'gregsexton/gitv'
 " git-vim
 Bundle 'motemen/git-vim'
 
+" python-mode
+Bundle 'klen/python-mode'
+
 filetype plugin indent on
