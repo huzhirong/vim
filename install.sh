@@ -3,7 +3,7 @@
 # 调试
 set -e 
 
-# 判断是否存在这个变量
+# 判断是否存在 VIM_DIR 这个变量
 if [ -z "$VIM_DIR" ]; then
     VIM_DIR=~/.vim
 fi
@@ -24,7 +24,7 @@ if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc.pre-my-vim
 fi
 
-# 从 github 下载 .vimrc和bundles.vim 文件
+# 从 github上克隆 vim 到 ~/.vim 
 echo "Cloning .vimrc file"
 hash git >/dev/null 2>&1 && git clone https://github.com/huzhirong/vim.git $VIM_DIR || {
     echo "git not Installed"
