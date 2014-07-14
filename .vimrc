@@ -1,59 +1,77 @@
 source ~/.vim/bundles.vim
 
+set nocompatible
+
 "basic配置
-set go=
+set go=   "去掉菜单
 set number "显示行号
 set autoindent "使用对齐格式，也就是把当前行的的对齐格式应该到下一行
 set smartindent "依据上面的对齐格式，智能的选择对齐方式
 set tabstop=4 "设置tab键为4个空格
 set shiftwidth=4 "设置当行之间交错时使用4个空格
 set ruler "设置在编辑过程中，在右下角显示光标位置的状态行
-set showmatch "高亮显示匹配的括号
-let g:mapleader = ","
-imap <leader>e <esc>
+
+"一组快捷键
+let g:mapleader = ","  "设置全局快捷键
+imap <leader>e <esc> 
 map <leader>q :q!<cr>
 map <leader>w :w!<cr>
 map <leader>ee :e ~/.vimrc<cr>
-set nobackup
-set noswapfile
-set hlsearch
 
-"easier navigation between split windows
+set nobackup   "不生成备份文件
+set noswapfile "不生交换文件
+set showmatch  "高亮显示匹配的括号
+
+"在分割窗口的快捷键操作
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
 
-"encoding dectection
+"编码类型
 set fenc=utf-8
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gbk,gb18030,latin1
 set fileencoding=utf-8
-"set encoding=cp936
 
-"enable filetype dectection and ft specific plugin/indent
 filetype indent on
-
-"enable syntax hightlight and completion 
-syntax enable
+syntax enable     "开启语法
 syntax on
 
-"color theme
-" color vividchalk
-colorscheme desert "设置背景颜色 
+"颜色主题
+if has('gui_running')
+	colorscheme desert "设置背景颜色 
+else
+	colorscheme desert256
+endif 
 
-" highlight current line
-"au WinLeave * set nocursorline nocursorcolumn
-"au WinEnter * set cursorline cursorcolumn
-"set cursorline cursorcolumn
+" 高亮当前行和列
 set cursorline "高亮当前行                                                        
 set cursorcolumn "高亮纵向行
 
-"search operations
+" 搜索操作
 set incsearch
-"set highlight  " conflict with highlight current line
-set ignorecase
+set ignorecase "忽略大小写
 set smartcase
+set hlsearch   "高亮搜索的结果
+
+"历史记录
+set history=1000
+set undoreload=1000
+
+"屏蔽上下左右快捷键
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+"保存.vimrc 文件就自动加载
+autocmd! BufWritePost vimrc source %
+autocmd! BufWritePost *.vimrc source ~/.vimrc
 
 "NERDTree
 map nt :NERDTreeToggle<cr>
@@ -151,6 +169,3 @@ let g:vimwiki_list = [{
            \ 'auto_export': 1,}]
 let g:vimwiki_list = [{'path': '/home/cry/vimwiki/wiki_techno/', 'path_html': '/home/cry/vimwiki/wiki_techno/html/', 'template_path': '/home/cry/vimwiki/wiki_techno/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1},{'path': '/home/cry/vimwiki/wiki_literature/', 'path_html': '/home/cry/vimwiki/wiki_literature/html/', 'template_path': '/home/cry/vimwiki/wiki_literature/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1}]                                
 let g:vimwiki_browsers=['/usr/bin/firefox'] "用firefox来预览wiki
-
-autocmd FileType css imap <tab> <plug>(emmet-expand-abbr)
-autocmd FileType html imap <tab> <plug>(emmet-expand-abbr)
