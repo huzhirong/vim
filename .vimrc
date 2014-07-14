@@ -142,10 +142,6 @@ let g:tagbar_compact = 1
 "autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 "autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 
-" 按 tab 自动补全
-autocmd FileType html imap <tab> <plug>(emmet-expand-abbr)
-autocmd FileType css imap <tab> <plug>(emmet-expand-abbr)
-
 "vimwiki
 let g:vimwiki_camel_case = 0 "不要将驼峰式词组作为Wiki词条
 let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,br,hr,div,del,code,red,center,left,right,h4,h5,h6,pre' "声明可以在wiki里面使用的HTML标签

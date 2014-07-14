@@ -99,6 +99,10 @@ Bundle 'motemen/git-vim'
 " python-mode
 Bundle 'klen/python-mode'
 
+"vim-airline
 Bundle 'bling/vim-airline'
+
+"vimux
+Bundle 'bling/vimux'
 
 filetype plugin indent on
