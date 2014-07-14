@@ -76,6 +76,9 @@ autocmd! BufWritePost *.vimrc source ~/.vimrc
 "设置字体
 set guifont=Monaco:h12
 
+"airline
+let g:airline#extensions#tabline#enabled = 1
+
 "NERDTree
 map nt :NERDTreeToggle<cr>
 let NERDTreeWinPos="right"
@@ -152,3 +155,7 @@ let g:vimwiki_list = [{
            \ 'auto_export': 1,}]
 let g:vimwiki_list = [{'path': '~/vimwiki/wiki_techno/', 'path_html': '~/vimwiki/wiki_techno/html/', 'template_path': '~/vimwiki/wiki_techno/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1},{'path': '~/vimwiki/wiki_literature/', 'path_html': '~/vimwiki/wiki_literature/html/', 'template_path': '~/vimwiki/wiki_literature/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1}]                                
 let g:vimwiki_browsers=['/usr/bin/firefox'] "用firefox来预览wiki
+
+map <F8> :%s/^\(\s*\)</F8>\1'</plug>g<CR>
+map <F9> :%s/>\(,\)\?\s*$/\>'\1/g<CR>
+map <F10> :%s/>'$/>',/g<CR>
