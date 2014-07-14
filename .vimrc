@@ -73,6 +73,9 @@ inoremap <right> <nop>
 autocmd! BufWritePost vimrc source %
 autocmd! BufWritePost *.vimrc source ~/.vimrc
 
+"设置字体
+set guifont=Monaco:h12
+
 "NERDTree
 map nt :NERDTreeToggle<cr>
 let NERDTreeWinPos="right"
@@ -90,13 +93,10 @@ let g:user_emmet_leader_key='<C-J>'
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
 let g:neoComplcache_disableautocomplete=1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_smart_case=1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 set completeopt-=preview
-
 
 "Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -106,17 +106,7 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" For snippet_complete marker.
-"if has('conceal')
-" set conceallevel=2 concealcursor=i
-"endif
-
 let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
-
-"imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-"smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-"imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-"smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 "Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -125,15 +115,11 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
-"ino <c-k> <c-r>=TriggerSnippet()<cr>
-"snor <c-k> <esc>i<right><c-r>=TriggerSnippet()<cr>
-
 " SuperTab
-"let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
 
-"ScrollColors插件
+"选择颜色主题插件
 map <leader>sc :SCROLL
 
 "ctrlp
@@ -142,7 +128,6 @@ let g:ctrlp_max_height = 20
 let g:ctrlp_working_path_mode = 'rw'
 
 " Tagbar
-" snippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'jjkk
 nmap tt :TagbarToggle<cr>
 let g:tagbar_left=1
 let g:tagbar_width=30
@@ -159,13 +144,11 @@ autocmd FileType html imap <tab> <plug>(emmet-expand-abbr)
 autocmd FileType css imap <tab> <plug>(emmet-expand-abbr)
 
 "vimwiki
-"nmap <F3> :Vimwiki2HTML<cr> "把当前wiki文件生成html
-"nmap <F4> :VimwikiAll2HTML<cr> "把所有wiki文件生成html
 let g:vimwiki_camel_case = 0 "不要将驼峰式词组作为Wiki词条
 let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,br,hr,div,del,code,red,center,left,right,h4,h5,h6,pre' "声明可以在wiki里面使用的HTML标签
 let g:vimwiki_list = [{
-           \ 'path': '/home/cry/vimwiki/',
-           \ 'path_html': '/home/cry/vimwiki/html/',
+           \ 'path': '~/vimwiki/',
+           \ 'path_html': '~/vimwiki/html/',
            \ 'auto_export': 1,}]
-let g:vimwiki_list = [{'path': '/home/cry/vimwiki/wiki_techno/', 'path_html': '/home/cry/vimwiki/wiki_techno/html/', 'template_path': '/home/cry/vimwiki/wiki_techno/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1},{'path': '/home/cry/vimwiki/wiki_literature/', 'path_html': '/home/cry/vimwiki/wiki_literature/html/', 'template_path': '/home/cry/vimwiki/wiki_literature/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1}]                                
+let g:vimwiki_list = [{'path': '~/vimwiki/wiki_techno/', 'path_html': '~/vimwiki/wiki_techno/html/', 'template_path': '~/vimwiki/wiki_techno/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1},{'path': '~/vimwiki/wiki_literature/', 'path_html': '~/vimwiki/wiki_literature/html/', 'template_path': '~/vimwiki/wiki_literature/html/template/', 'template_default': 'default', 'template_ext': '.html', 'auto_export': 1}]                                
 let g:vimwiki_browsers=['/usr/bin/firefox'] "用firefox来预览wiki
